@@ -2,13 +2,8 @@
     "descriptor_map": [
         {
             "id": "NextcloudCredential",
-            "path": "$",
             "format": "verifiable-credential+sd-jwt",
-            "path_nested": {
-                "id": "NextcloudCredential",
-                "path": "$",
-                "format": "verifiable-credential+sd-jwt"
-            }
+            "path": "$"
         }
     ],
     "definition_id": "d76c51b7-ea90-49bb-8368-6b3d194fc131",
