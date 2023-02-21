@@ -1,16 +1,43 @@
-__Disclosure for `credentialSubject`:__
+__Disclosure for `given_name`:__
 
 ```
-WyJoTTJvWXowZ3NEOWllYXNnT2oyMW5BIiwgImNyZWRlbnRpYWxTdWJqZWN0IiwgeyJn
-aXZlbl9uYW1lIjogIkVyaWthIiwgImZhbWlseV9uYW1lIjogIk11c3Rlcm1hbm4iLCAi
-ZW1haWwiOiAidGVzdEBleGFtcGxlLmNvbSJ9XQ
+WyJ2MzFXTXB4bU9PY3g3d0xqQ2dzOWN3IiwgImdpdmVuX25hbWUiLCAiRXJpa2EiXQ
 ```
 
 Contents:
 
 ```
-["hM2oYz0gsD9ieasgOj21nA", "credentialSubject", {"given_name":
-"Erika", "family_name": "Mustermann", "email": "test@example.com"}]
+["v31WMpxmOOcx7wLjCgs9cw", "given_name", "Erika"]
 ```
 
-SHA-256 Hash: `-zFYjetEuOjV36LznP5akLH9OjdsvHC-KoRzIXRrNhE`
+SHA-256 Hash: `wfAoLwxLeY7htrkHjIR1ytlIHQK38u-SXwBo5yMET-Q`
+
+__Disclosure for `family_name`:__
+
+```
+WyJySTVmM3M5S2VEZHExMU80cHhfbkhBIiwgImZhbWlseV9uYW1lIiwgIk11c3Rlcm1h
+bm4iXQ
+```
+
+Contents:
+
+```
+["rI5f3s9KeDdq11O4px_nHA", "family_name", "Mustermann"]
+```
+
+SHA-256 Hash: `ndnhtZSduRuKlI5mgwrsq_yNSGjH-D_iK1NFoK382sc`
+
+__Disclosure for `email`:__
+
+```
+WyJBdlgtWUV3N3FQX3o0YkkwUmVnUzZnIiwgImVtYWlsIiwgInRlc3RAZXhhbXBsZS5j
+b20iXQ
+```
+
+Contents:
+
+```
+["AvX-YEw7qP_z4bI0RegS6g", "email", "test@example.com"]
+```
+
+SHA-256 Hash: `8TmdnDQzEEL223xDJn7J2bgE217uU49haKWPtms4UmY`
