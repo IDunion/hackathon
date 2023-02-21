@@ -1,0 +1,41 @@
+{
+    "response_type": "vp_token",
+    "client_id": "https://5779-2a02-8070-27ba-5100-8158-e3bc-da6c-6529.ngrok.io/index.php/apps/oidc_login/oidc/callback",
+    "response_mode": "direct_post",
+    "redirect_uri": "https://5779-2a02-8070-27ba-5100-8158-e3bc-da6c-6529.ngrok.io/index.php/apps/oidc_login/oidc/callback",
+    "nonce": "22456608037449564223",
+    "presentation_definition": {
+        "id": "d76c51b7-ea90-49bb-8368-6b3d194fc131",
+        "input_descriptors": [
+            {
+                "id": "NextcloudCredential",
+                "format": {
+                    "verifiable-credential+sd-jwt": {
+                        "proof_type": [
+                            "JsonWebSignature2020"
+                        ]
+                    }
+                },
+                "constraints": {
+                    "limit_disclosure": "required",
+                    "fields": [
+                        {
+                            "path": [
+                                "$.type"
+                            ],
+                            "filter": {
+                                "type": "string",
+                                "const": "NextCloudLogin"
+                            }
+                        },
+                        {
+                            "path": [
+                                "$.credentialSubject.email"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

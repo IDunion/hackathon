@@ -1,0 +1,34 @@
+{
+    "id": "d76c51b7-ea90-49bb-8368-6b3d194fc131",
+    "input_descriptors": [
+        {
+            "id": "NextcloudCredential",
+            "format": {
+                "verifiable-credential+sd-jwt": {
+                    "proof_type": [
+                        "JsonWebSignature2020"
+                    ]
+                }
+            },
+            "constraints": {
+                "limit_disclosure": "required",
+                "fields": [
+                    {
+                        "path": [
+                            "$.type"
+                        ],
+                        "filter": {
+                            "type": "string",
+                            "const": "NextCloudLogin"
+                        }
+                    },
+                    {
+                        "path": [
+                            "$.credentialSubject.email"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
