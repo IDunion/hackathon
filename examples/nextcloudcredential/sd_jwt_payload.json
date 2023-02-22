@@ -1,25 +1,25 @@
 {
+  "_sd": [
+    "T3ltXAAm83IMtTbDSoRvwX6NMtzmlq_YXoUwQ0d644E"
+  ],
   "iss": "https://example.com/issuer",
   "iat": 1516239022,
   "type": "NextCloudLogin",
-  "confirmationMethods": [
-    {
-      "type": "RawKeyBinding",
-      "jwk": {
-        "crv": "P-256",
-        "kty": "EC",
-        "x": "acbIQiuMs3i8_uszEjJ2tpTtRM4EU3yz91PH6CdH2V0",
-        "y": "_KcyLj9vWMptnmKtm46GqDz8wf74I5LKgrl2GzH3nSE"
-      }
-    }
-  ],
   "credentialSubject": {
     "_sd": [
-      "8TmdnDQzEEL223xDJn7J2bgE217uU49haKWPtms4UmY",
-      "ndnhtZSduRuKlI5mgwrsq_yNSGjH-D_iK1NFoK382sc",
-      "wfAoLwxLeY7htrkHjIR1ytlIHQK38u-SXwBo5yMET-Q"
+      "OG_OiB2NYKBsMXH8UUoinDHTOXyTDugrOtOxDR64_Ys",
+      "cpqT3tRbWKPLlXgloTflLZOwefY8ozKy5BFEnJbl8Ak",
+      "jblNLekArlGIusOQItntz1sf3WpCGgQH0UqVKnvasqU"
     ]
   },
   "exp": 1516247022,
-  "_sd_alg": "sha-256"
+  "_sd_alg": "sha-256",
+  "cnf": {
+    "jwk": {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "TCAER19Zvu3OHF4j4W4vfSVoHIP1ILilDls7vCeGemc",
+      "y": "ZxjiWWbZMQGHVWKVQ4hbSIirsVfuecCE6t4jT9F2HZQ"
+    }
+  }
 }

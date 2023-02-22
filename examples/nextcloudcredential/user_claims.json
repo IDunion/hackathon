@@ -3,18 +3,8 @@
     VNczNpOF91c3pFakoydHBUdFJNNEVVM3l6OTFQSDZDZEgyVjAiLCJ5IjoiX0tjeU
     xqOXZXTXB0bm1LdG00NkdxRHo4d2Y3NEk1TEtncmwyR3pIM25TRSJ9",
   "iat": 1541493724,
+  "exp": 1541494724,
   "type": "NextCloudLogin",
-  "confirmationMethods": [
-    {
-      "type": "RawKeyBinding",
-      "jwk": {
-        "crv": "P-256",
-        "kty": "EC",
-        "x": "acbIQiuMs3i8_uszEjJ2tpTtRM4EU3yz91PH6CdH2V0",
-        "y": "_KcyLj9vWMptnmKtm46GqDz8wf74I5LKgrl2GzH3nSE"
-      }
-    }
-  ],
   "credentialSubject": {
     "given_name": "Erika",
     "family_name": "Mustermann",
