@@ -1,0 +1,36 @@
+@startuml
+
+participant user as u
+
+participant "User Agent" as ua
+
+participant "NextCloudPlugin" as be
+
+participant "Wallet" as w
+
+u --> ua: log me in
+activate ua
+ua --> be: log me in
+be --> be: prepare transaction
+be --> ua: QR Code \n(1_authorization_request.txt)
+
+u --> w: scan QR Code
+activate w
+w -> be: get request object
+be -> w: request object \n(2_request_object_cross_device.json)
+w --> w: processing/filter credentials
+
+ua --> be: fetch results
+be --> ua: still waiting
+
+w --> u: request consent
+u --> w: consent
+w -> w: prepare presentation
+w -> be: direct post (presentation_submission, vp_token) \n(3_authentication_response_cross_device.txt)
+be -> be: process VP 
+be -> w: ack
+
+ua --> be: fetch results
+be --> ua: login successful
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+
+participant user as u
+
+participant "User Agent" as ua
+
+participant "NextCloudPlugin" as be
+
+participant "Wallet" as w
+
+u --> ua: log me in
+activate ua
+ua --> be: log me in
+be --> be: prepare transaction
+be --> ua: redirect to wallet \n(1_authorization_request.txt)
+ua --> w: authorization request \n(1_authorization_request.txt)
+deactivate ua
+activate w
+w -> be: get request object
+be -> w: request object \n(2_request_object_cross_device.json)
+w --> w: processing/filter credentials
+w --> u: request consent
+u --> w: consent
+w -> w: prepare presentation
+w -> ua: redirect to verifier (presentation_submission, vp_token) \n(3_authentication_response_same_device.txt)
+deactivate w
+ua -> be: authorization response \n(3_authentication_response_same_device.txt
+activate ua
+be -> be: process VP
+be --> ua: login successful
+
+@enduml

@@ -4,7 +4,7 @@
         {
             "id": "NextcloudCredential",
             "format": {
-                "verifiable-credential+sd-jwt": {
+                "vc+sd-jwt": {
                     "proof_type": [
                         "JsonWebSignature2020"
                     ]

@@ -1,0 +1,37 @@
+@startuml
+
+autonumber
+
+participant "User" as u
+participant "Wallet" as w
+
+box "Credential Issuer"
+
+participant "Web Site" as ws
+
+participant "Authorization Server" as as
+
+participant "Credential Issuance API" as ci
+
+end box
+
+u --> ws: request issuance
+ws --> ws: email validation
+ws --> ws: show QR Code (1_credential_offer)
+
+u --> w: scan QR Code
+w -> ci: get credential issuer metadata
+ci -> w: credential issuer metadata (/credential_issuer/.well-known/openid-credential-issuer)
+
+w -> as: get authorization server metadata
+as -> w: authorization server metadata (/credential_issuer/.well-known/oauth-authorization-server
+
+w -> as: token request (grant_type=urn:ietf:params:oauth:grant-type:pre-authorized_code, pre-authorized_code=<code>, user_pin=<pin>)
+as -> w: token response (access_token, c_nonce, ...)
+
+w --> w: prepare proof of possession
+
+w -> ci: credential request (format, type, proof)
+ci -> w: credential response (format, credential)
+
+@enduml

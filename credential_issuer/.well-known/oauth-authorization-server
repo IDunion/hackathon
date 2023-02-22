@@ -1,0 +1,12 @@
+   {
+      "issuer":
+        "https://as.example.com",
+      "token_endpoint":
+        "https://as.example.com/token",
+      "token_endpoint_auth_methods_supported":
+        ["client_secret_basic", "private_key_jwt"],
+      "token_endpoint_auth_signing_alg_values_supported":
+        ["RS256", "ES256"],
+      "response_types_supported":
+        ["urn:ietf:params:oauth:grant-type:pre-authorized_code"]
+     }
