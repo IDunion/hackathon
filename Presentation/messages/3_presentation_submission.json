@@ -2,7 +2,7 @@
     "descriptor_map": [
         {
             "id": "NextcloudCredential",
-            "format": "vc+sd-jwt-p",
+            "format": "vp+sd-jwt",
             "path": "$"
         }
     ],
