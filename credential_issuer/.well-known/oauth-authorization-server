@@ -1,8 +1,8 @@
    {
       "issuer":
-        "https://as.example.com",
+        "https://credential-issuer.example.com",
       "token_endpoint":
-        "https://as.example.com/token",
+        "https://credential-issuer.example.com/token",
       "token_endpoint_auth_methods_supported":
         ["client_secret_basic", "private_key_jwt"],
       "token_endpoint_auth_signing_alg_values_supported":
