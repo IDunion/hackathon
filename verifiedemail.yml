@@ -3,7 +3,7 @@ user_claims:
   "iss": "did:jwk:eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6ImFjYklRaXVNczNpOF91c3pFakoydHBUdFJNNEVVM3l6OTFQSDZDZEgyVjAiLCJ5IjoiX0tjeUxqOXZXTXB0bm1LdG00NkdxRHo4d2Y3NEk1TEtncmwyR3pIM25TRSJ9",
   "iat": 1541493724,
   "exp": 1541494724,
-  "type": "NextCloudLogin",
+  "type": "VerifiedEMail",
   "credentialSubject": {
     "given_name": "Erika",
     "family_name": "Mustermann",

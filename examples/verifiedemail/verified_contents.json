@@ -2,13 +2,9 @@
   "iss": "https://example.com/issuer",
   "iat": 1516239022,
   "exp": 1516247022,
-  "type": "NextCloudLogin",
+  "type": "VerifiedEMail",
   "credentialSubject": {
-    "_sd": [
-      "ElFWglZ-pUoit5VIhyc97Kk9Xzbr2wz_EPJ_0dBTHkc",
-      "VvEIDyZUfxmBhr_SusEKdCm3yskiyqd2q_QynVh4NK0",
-      "atVc1rW3tdCqpaUJK_WojJ1am9vlUvc87l1CsX86t_w"
-    ]
+    "email": "test@example.com"
   },
   "_sd_alg": "sha-256",
   "cnf": {

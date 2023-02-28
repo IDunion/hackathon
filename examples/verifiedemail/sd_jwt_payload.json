@@ -1,19 +1,13 @@
 {
-  "alg": "ES256",
-  "typ": "vc+sd-jwt",
-  "cty": "credential-claims-set+json"
-}
-.
-{
   "iss": "https://example.com/issuer",
   "iat": 1516239022,
   "exp": 1516247022,
-  "type": "NextCloudLogin",
+  "type": "VerifiedEMail",
   "credentialSubject": {
     "_sd": [
-      "ElFWglZ-pUoit5VIhyc97Kk9Xzbr2wz_EPJ_0dBTHkc",
-      "VvEIDyZUfxmBhr_SusEKdCm3yskiyqd2q_QynVh4NK0",
-      "atVc1rW3tdCqpaUJK_WojJ1am9vlUvc87l1CsX86t_w"
+      "9JVJiGEFyCBuD-DdZ_evUsdvwOzQtYQ-IWEeA6D_plg",
+      "LdIvoShQoaaE7Dx-Cm_YTDN-bGRWSF2Zc7vqhAds4Ho",
+      "d2zPDHk2lPubb6ro3RloMfoLrGZLf9NfNfaDt59VEBs"
     ]
   },
   "_sd_alg": "sha-256",

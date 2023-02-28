@@ -19,7 +19,7 @@
                         ],
                         "filter": {
                             "type": "string",
-                            "const": "NextCloudLogin"
+                            "const": "VerifiedEMail"
                         }
                     },
                     {

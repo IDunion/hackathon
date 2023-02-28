@@ -4,10 +4,18 @@
     xqOXZXTXB0bm1LdG00NkdxRHo4d2Y3NEk1TEtncmwyR3pIM25TRSJ9",
   "iat": 1541493724,
   "exp": 1541494724,
-  "type": "NextCloudLogin",
+  "type": "VerifiedEMail",
   "credentialSubject": {
     "given_name": "Erika",
     "family_name": "Mustermann",
     "email": "test@example.com"
+  },
+  "cnf": {
+    "jwk": {
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "TCAER19Zvu3OHF4j4W4vfSVoHIP1ILilDls7vCeGemc",
+      "y": "ZxjiWWbZMQGHVWKVQ4hbSIirsVfuecCE6t4jT9F2HZQ"
+    }
   }
 }
