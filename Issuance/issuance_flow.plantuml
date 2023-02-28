@@ -26,7 +26,7 @@ ci -> w: credential issuer metadata (/credential_issuer/.well-known/openid-crede
 w -> as: get authorization server metadata
 as -> w: authorization server metadata (/credential_issuer/.well-known/oauth-authorization-server
 
-w -> as: token request (grant_type=urn:ietf:params:oauth:grant-type:pre-authorized_code, pre-authorized_code=<code>, user_pin=<pin>)
+w -> as: token request (grant_type=urn:ietf:params:oauth:grant-type:pre-authorized_code, pre-authorized_code=<code>)
 as -> w: token response (access_token, c_nonce, ...)
 
 w --> w: prepare proof of possession
