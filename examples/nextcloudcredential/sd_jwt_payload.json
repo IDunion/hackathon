@@ -1,18 +1,15 @@
 {
-  "_sd": [
-    "T3ltXAAm83IMtTbDSoRvwX6NMtzmlq_YXoUwQ0d644E"
-  ],
   "iss": "https://example.com/issuer",
   "iat": 1516239022,
+  "exp": 1516247022,
   "type": "NextCloudLogin",
   "credentialSubject": {
     "_sd": [
-      "OG_OiB2NYKBsMXH8UUoinDHTOXyTDugrOtOxDR64_Ys",
-      "cpqT3tRbWKPLlXgloTflLZOwefY8ozKy5BFEnJbl8Ak",
-      "jblNLekArlGIusOQItntz1sf3WpCGgQH0UqVKnvasqU"
+      "ElFWglZ-pUoit5VIhyc97Kk9Xzbr2wz_EPJ_0dBTHkc",
+      "VvEIDyZUfxmBhr_SusEKdCm3yskiyqd2q_QynVh4NK0",
+      "atVc1rW3tdCqpaUJK_WojJ1am9vlUvc87l1CsX86t_w"
     ]
   },
-  "exp": 1516247022,
   "_sd_alg": "sha-256",
   "cnf": {
     "jwk": {
