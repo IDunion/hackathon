@@ -1,0 +1,41 @@
+@startuml img/uml.png
+
+skinparam monochrome false
+skinparam shadowing false
+
+title Wallet Attestation Process with OID4VCI
+
+participant ce as "Wallet Provider's Attestation Service"
+participant wa as "Wallet /\nHolder"
+participant is as "Issuer"
+participant tr as "Trust registry"
+
+== Issuance ==
+is <->  wa: user dialogue
+is -> wa: initiate issuance request (credential offer), e.g. deep link/QR-Code
+wa -> is: get credential metadata (incl. security requirements, \ne.g. key_mechanisms, user authentication, attestation vc)
+group on-demand attestation
+    wa -> ce : get nonce
+    ce -> wa : nonce
+    wa -> wa : perform wallet attestation\n(e.g. Play Integrity, iOS DeviceChecker, ...)
+    wa -> ce : token request (OS specific attestation as client credential)
+    ce -> ce : validate wallet attestation
+    ce -> wa : refresh_token, access token, c_nonce
+    wa -> wa : generate hardware-backed key (TEE, SE, ...)
+    wa -> wa : create proof
+    wa -> ce : credential issuance request\n(access_token, proof, format, type)
+    ce -> ce : validate proof
+    ce -> wa : credential issuance response : wallet attestation VC
+end
+wa -> is : get nonce
+is -> wa : nonce
+wa -> wa: create wallet attestation VC VP (aud, nonce)
+wa -> is: token request (pre-authz code, wallet attestation VP): access_token, c_nonce
+is -> tr : request information on wallet certification
+wa -> wa : generate hardware-backed key (TEE, SE, ...)
+wa -> wa: create proof 
+wa -> is : credential issuance request\n(access token, format, type)
+is -> is : verify proof
+
+is -> wa : issue credential 
+@enduml
