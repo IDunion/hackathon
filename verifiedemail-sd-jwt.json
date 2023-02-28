@@ -5,7 +5,9 @@
 }
 .
 {
-  "iss": "https://example.com/issuer",
+  "iss": "did:jwk:eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6ImFjYklRaX
+  VNczNpOF91c3pFakoydHBUdFJNNEVVM3l6OTFQSDZDZEgyVjAiLCJ5IjoiX0tjeU
+  xqOXZXTXB0bm1LdG00NkdxRHo4d2Y3NEk1TEtncmwyR3pIM25TRSJ9",
   "iat": 1516239022,
   "exp": 1516247022,
   "type": "VerifiedEMail",
