@@ -1,4 +1,4 @@
-https://agents.labor.gematik.de?
+openid://?
     &client_id=https%3A%2F%2F5779-2a02-8070-27ba-5100-8158-e3bc-da6c-6529.ngrok.io%2Findex.php%2Fapps%2Foidc_login%2Foidc%2Fcallback
     &request_uri=https%3A%2F%2F5779-2a02-8070-27ba-5100-8158-e3bc-da6c-6529.ngrok.io%2Findex.php%2Fapps%2Foidc_login%2Foidc%2Frequestobject%2Ffcd5b6f2c623182e998b5c70614d745b
 
