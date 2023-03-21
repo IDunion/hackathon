@@ -1,0 +1,24 @@
+{
+  "version" : 1, //version of the trust list definition
+  "sequence-number" : 1, //release version
+  "type" : "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+  "scheme-operator": "tbd",
+  "scheme-name" : "IDunionWalletAttestationTestScheme",
+  "scheme-information" : "tbd",
+  "trust-service-providers" : [
+    {
+      "name" : "https://attestation-service.ssi.tir.budru.de",
+      "contact" : "tbd",
+      "jwk" : "did:key:eyJrdHkiOiJFQyIsImQiOiJ6M1NTdUZEX2V5OVJNMWtPeWhaaFdvZzRxOEtSbUlTRlI0T2NvQTE1ZDhnIiwiY3J2IjoiUC0yNTYiLCJ4IjoiM01kYmhBTjlRTGRSdE5BT2VrUlFvT0pPcVBuYURuckg0VlVjVDlOZE5MUSIsInkiOiJEZG1GSV9tZVlaQldSQm1WM3lQdHYxYmduSkNFaWZEczVVVVM0S01LT0xvIn0",
+      "attestation" : [
+        {
+          "name" : "Lissi Wallet",
+          "id" : "https://trust-registry.eu/wallets/lissi",
+          "LoA" : "eIDAS-substantial"
+        },
+        //the next attestable wallet..
+      ]
+    },
+    //the next attestation service..
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "iss": "eyJrdHkiOiJFQyIsImQiOiJ6M1NTdUZEX2V5OVJNMWtPeWhaaFdvZzRxOEtSbUlTRlI0T2NvQTE1ZDhnIiwiY3J2IjoiUC0yNTYiLCJ4IjoiM01kYmhBTjlRTGRSdE5BT2VrUlFvT0pPcVBuYURuckg0VlVjVDlOZE5MUSIsInkiOiJEZG1GSV9tZVlaQldSQm1WM3lQdHYxYmduSkNFaWZEczVVVVM0S01LT0xvIn0",
+  "sub": "https://trust-registry.eu/wallets/lissi",
+  //no audience here for privacy reasons
+  "iat": 1541493724,
+  "exp": 1516247022, //expiration ~30 to 90 days..
+  "vc": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://idunion.org/schemas/WalletAttestation"
+    ],
+    "type": ["VerifiableCredential", "WalletAttestation"],
+    "credentialSubject": {
+      "wallet_name": "Lissi Dev",
+      "wallet_version": "1.2.0",
+      "wallet_os" : "ANDROID",
+      "secure_area_type": "STRONGBOX", // enumeration of TEE, SECURE_ENCLAVE, SE, EUICC, etc..
+      "secure_area_keys": [ //formatted as JWK, array to support batch issuance
+        {
+          "kty": "EC",
+          "crv": "P-256",
+          "x": "TCAER19Zvu3OHF4j4W4vfSVoHIP1ILilDls7vCeGemc",
+          "y": "ZxjiWWbZMQGHVWKVQ4hbSIirsVfuecCE6t4jT9F2HZQ"
+        }
+      ],
+      "secure_area_user_authentication" : [
+        "APP_6_DIGIT_PIN",
+        "SYSTEM_FINGERPRINT"
+      ]
+    }
+  }
+}
