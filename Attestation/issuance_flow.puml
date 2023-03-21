@@ -46,9 +46,9 @@ w -> i : Token Request:\nHTTP POST https://issuer.com/<token_endpoint>\ngrant_ty
 i -> i : verify wallet attestation VP
 i -> t : query certification status of wallet provider
 t -> i : certification status of wallet provider
-i -> w : Token Response:\nHTTP 200  {"access_token":"..", "token_type"="..", "c_nonce"="..", "refresh_token"=".."}
+i -> w : Token Response:\nHTTP 200  {"access_token":"..", "token_type"="..", "c_nonce"=".."}
 
-note over w : proof of possession for binding key with c_nonce\n{"alg": "ES256", "x5c/kid/jwk":..}.{"aud":"https://issuer.com","iat": ..,"nonce":".."}
+note over w : generate keys for proof of possession for binding key with c_nonce\n{"alg": "ES256", "x5c/kid/jwk":..}.{"aud":"https://issuer.com","iat": ..,"nonce":".."}\nOR\nreuse the hardware keys from wallet attestation
 w -> i : Credential Request:\nHTTP POST https://issuer.com/credential\nAuthorization: Bearer <access_token>\n{"format":"..", "proof":{"proof_type":"jwt","jwt":".."}}
 i -> w : Credential Response:\nHTTP 200 {"format":"..","credential":".."
 
