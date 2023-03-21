@@ -29,16 +29,16 @@ i -> w : HTTP 200 {"issuer":"..", "token_endpoint":"..", "response_types_support
 
 u -> w : request issuance\noptionally provide PIN
 
-note over w: select or obtain wallet attestation VC
-'opt on-demand wallet attestation
-'note over w,a: attestation may be a proprietary process,\n the interoperability of wallet attestations\nacross multiple wallets and attestation services\n is achieved by a common credential schema
-'w -> a : get challenges
-'a -> w : provide challenges
-'w -> w : generate hardware keys, key attestations & app attestation
-'w -> a : send keys and attestations
-'a -> a : verify key & app attestations
-'a -> w : issue wallet attestation
-'end
+note over w: select or obtain wallet attestation VC, wallet attestations are issuer-specific for privacy protection
+opt on-demand wallet attestation
+note over w,a: attestation may be a proprietary process,\n the interoperability of wallet attestations\nacross multiple wallets and attestation services\n is achieved by a common credential schema
+w -> a : get challenges
+a -> w : provide challenges
+w -> w : generate hardware keys, key attestations & app attestation
+w -> a : send keys and attestations
+a -> a : verify key & app attestations
+a -> w : issue wallet attestation
+end
 
 w -> w : generate VP of wallet attestation\nwith **nonce=pre_authroized_code**
 
