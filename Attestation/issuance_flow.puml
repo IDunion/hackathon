@@ -43,6 +43,7 @@ end
 w -> w : generate VP of wallet attestation\nwith **nonce=pre_authroized_code**
 
 w -> i : Token Request:\nHTTP POST https://issuer.com/<token_endpoint>\ngrant_type=pre-authorized_code&pre-authorized_code=..&user_pin=..**&attestation=<VP of wallet attestation>**
+i -> i : check pre-auth code & userPIN
 i -> i : **verify wallet attestation VP**
 i -> t : **query certification status of wallet provider**
 t -> i : **certification status of wallet provider**
@@ -50,6 +51,7 @@ i -> w : Token Response:\nHTTP 200  {"access_token":"..", "token_type"="..", "c_
 
 note over w : generate keys for proof of possession for binding key with c_nonce\n{"alg": "ES256", "x5c/kid/jwk":..}.{"aud":"https://issuer.com","iat": ..,"nonce":".."}\nOR\nreuse the hardware keys from wallet attestation
 w -> i : Credential Request:\nHTTP POST https://issuer.com/credential\nAuthorization: Bearer <access_token>\n{"format":"..", "proof":{"proof_type":"jwt","jwt":".."}}
+i -> i : check key proof
 i -> w : Credential Response:\nHTTP 200 {"format":"..","credential":".."
 
 @enduml
