@@ -5,9 +5,7 @@
   "iat": 1541493724,
   "exp": 1541494724,
   "type": "VerifiedEMail",
-  "credentialSubject": {
-    "given_name": "Erika",
-    "family_name": "Mustermann",
-    "email": "test@example.com"
-  }
+  "given_name": "Erika",
+  "family_name": "Mustermann",
+  "email": "test@example.com"
 }

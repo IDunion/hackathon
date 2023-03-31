@@ -1,15 +1,13 @@
 {
+  "_sd": [
+    "HA9B9TdPKMOqvv-EfrsrE009tQcSV71aQTjq0INvBAk",
+    "UiuRGkTW7e_5UQauGeQRQdF8u3WYevS4Fs0IuB_DgYM",
+    "tmPlXq0MID-oRXbUNHyoVZrc9Qkm8cwJTohVyOVlUgQ",
+    "vTz0JI103v4k4pKIloT83Yzi33L1SdZlWBPmsfJBefk"
+  ],
   "iss": "https://example.com/issuer",
   "iat": 1516239022,
   "exp": 1516247022,
-  "type": "VerifiedEMail",
-  "credentialSubject": {
-    "_sd": [
-      "9JVJiGEFyCBuD-DdZ_evUsdvwOzQtYQ-IWEeA6D_plg",
-      "LdIvoShQoaaE7Dx-Cm_YTDN-bGRWSF2Zc7vqhAds4Ho",
-      "d2zPDHk2lPubb6ro3RloMfoLrGZLf9NfNfaDt59VEBs"
-    ]
-  },
   "_sd_alg": "sha-256",
   "cnf": {
     "jwk": {

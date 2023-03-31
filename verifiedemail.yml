@@ -1,25 +1,16 @@
 user_claims:
- {
-  "iss": "did:jwk:eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6ImFjYklRaXVNczNpOF91c3pFakoydHBUdFJNNEVVM3l6OTFQSDZDZEgyVjAiLCJ5IjoiX0tjeUxqOXZXTXB0bm1LdG00NkdxRHo4d2Y3NEk1TEtncmwyR3pIM25TRSJ9",
-  "iat": 1541493724,
-  "exp": 1541494724,
-  "type": "VerifiedEMail",
-  "credentialSubject": {
+  {
+    "iss": "did:jwk:eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6ImFjYklRaXVNczNpOF91c3pFakoydHBUdFJNNEVVM3l6OTFQSDZDZEgyVjAiLCJ5IjoiX0tjeUxqOXZXTXB0bm1LdG00NkdxRHo4d2Y3NEk1TEtncmwyR3pIM25TRSJ9",
+    "iat": 1541493724,
+    "exp": 1541494724,
+    "type": "VerifiedEMail",
     "given_name": "Erika",
     "family_name": "Mustermann",
     "email": "test@example.com",
-  },
- }
-
-non_sd_claims:
-  {
-    "iss": true,
-    "iat": true,
-    "exp": true,
-    "type": true,
-    "credentialSubject": {},
   }
 
-holder_disclosed_claims: { "credentialSubject": { "email": true } }
+non_sd_claims: { "iss": true, "iat": true, "exp": true }
+
+holder_disclosed_claims: { "email": true }
 
 holder_binding: true
