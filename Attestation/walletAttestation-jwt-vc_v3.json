@@ -11,11 +11,7 @@
   "wallet_name": "Lissi Dev",
   "wallet_version": "1.2.0",
   "wallet_os" : "ANDROID",
-  "secure_area_type": "STRONGBOX", // enumeration of TEE, SECURE_ENCLAVE, SE, EUICC, etc..
-  "secure_area_user_authentication" : [
-    "APP_6_DIGIT_PIN",
-    "SYSTEM_FINGERPRINT"
-  ],
+  "supported_LoA" : "eIDAS_substantial",
   "cnf": {
     "jwk" : {
       "kty": "EC",
