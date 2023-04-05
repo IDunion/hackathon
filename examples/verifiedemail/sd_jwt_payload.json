@@ -1,13 +1,13 @@
 {
   "_sd": [
-    "HA9B9TdPKMOqvv-EfrsrE009tQcSV71aQTjq0INvBAk",
-    "UiuRGkTW7e_5UQauGeQRQdF8u3WYevS4Fs0IuB_DgYM",
-    "tmPlXq0MID-oRXbUNHyoVZrc9Qkm8cwJTohVyOVlUgQ",
-    "vTz0JI103v4k4pKIloT83Yzi33L1SdZlWBPmsfJBefk"
+    "PAl07NngWIQrhIflcJ43VGcTOx_IGZKVIN_0joOaQ_c",
+    "wEI-aMmjIye40FCro_N64MZ7ATXjP3hkThG09OCnfhU",
+    "yCjgfW-kGVL2KNPK_VvtrwW4AgjTE_lPedDnkTrQG_0"
   ],
   "iss": "https://example.com/issuer",
   "iat": 1516239022,
   "exp": 1516247022,
+  "type": "https://hackathon.idunion.org/VerifiedEMail",
   "_sd_alg": "sha-256",
   "cnf": {
     "jwk": {

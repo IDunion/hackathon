@@ -4,7 +4,7 @@
     xqOXZXTXB0bm1LdG00NkdxRHo4d2Y3NEk1TEtncmwyR3pIM25TRSJ9",
   "iat": 1541493724,
   "exp": 1541494724,
-  "type": "VerifiedEMail",
+  "type": "https://hackathon.idunion.org/VerifiedEMail",
   "given_name": "Erika",
   "family_name": "Mustermann",
   "email": "test@example.com"

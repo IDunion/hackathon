@@ -2,6 +2,7 @@
   "iss": "https://example.com/issuer",
   "iat": 1516239022,
   "exp": 1516247022,
+  "type": "https://hackathon.idunion.org/VerifiedEMail",
   "_sd_alg": "sha-256",
   "cnf": {
     "jwk": {
