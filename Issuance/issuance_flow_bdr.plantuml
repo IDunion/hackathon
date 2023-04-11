@@ -1,0 +1,43 @@
+@startuml
+
+autonumber
+
+participant u as "Holder/\nOAuth2 User"
+participant w as "Holder's Wallet/\nOAuth2 Client"
+participant b as "Issuer's Website\nHolder's Browser"
+participant i as "Issuer/\nOAuth2 Authorization Server"
+
+u -> b : open issuer website, fill form, request issuance
+b -> i : HTTP POST {"firstName":"..", "lastName":"..", "email":".."}
+note left : proprietary
+i -> i : verify email, generate preAuthcode, store to db
+i -> b : send Credential Offer:\n<credential_offer_uri>
+
+alt Same Device Flow (mobile wallet)
+b -> b : openid-credential-offer://credential_offer_uri=..
+else Cross Device Flow (mobile wallet)
+b -> b : QR-Code (credential_offer_uri=)
+end
+
+u -> w : scan QR-Code or click deeplink
+
+w -> i : HTTP GET <credential_offer_uri>
+i -> w : HTTP 200 {"credential_issuer_url"="..", "credentials"="..", "pre_authroized_code"="..", "user_pin_required"=".."
+
+w -> i : Issuer Metadata:\nHTTP GET <credential_issuer_url>/.well-known/openid-credential-issuer
+i -> w : HTTP 200 {"credential_issuer"="..", "credential_endpoint="..","credentials_supported"=".."}
+
+w -> i : Issuer Metadata:\nHTTP GET <credential_issuer_url>/.well-known/oauth-authorization-server
+i -> w : HTTP 200 {"issuer":"..", "token_endpoint":"..", "response_types_supported":"pre-authorized_code","pre-authorized_grant_anonymous_access_supported"}
+
+u -> w : consent issuance\noptionally provide PIN
+
+w -> i : Token Request:\nHTTP POST https://<token_endpoint>\ngrant_type=pre-authorized_code&pre-authorized_code=..&user_pin=..
+i -> w : Token Response:\nHTTP 200  {"access_token":"..", "token_type"="..", "c_nonce"="..", "refresh_token"=".."}
+
+note over w : proof of possession for binding key with c_nonce\n{"alg": "ES256", "x5c/kid/jwk":..}.{"aud":"https://issuer.com","iat": ..,"nonce":".."}
+
+w -> i : Credential Request:\nHTTP POST https://<credential_endpoint>\nAuthorization: Bearer <access_token>\n{"format":"..", "proof":{"proof_type":"jwt","jwt":".."}}
+i -> w : Credential Response:\nHTTP 200 {"format":"..","credential":".."
+
+@enduml
