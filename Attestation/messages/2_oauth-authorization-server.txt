@@ -1,0 +1,13 @@
+GET /.well-known/oauth-authorization-server
+
+200
+{
+  "issuer": "https://d2a7-193-28-64-192.ngrok-free.app",
+  "token_endpoint": "https://d2a7-193-28-64-192.ngrok-free.app/token",
+  "token_endpoint_auth_methods_supported": [
+    "urn:ietf:params:oauth:client-assertion-type:verifiable-presentation"
+  ],
+  "response_types_supported": [
+    "urn:ietf:params:oauth:grant-type:pre-authorized_code"
+  ]
+}
