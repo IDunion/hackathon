@@ -40,7 +40,7 @@ a -> a : verify key & app attestations
 a -> w : issue wallet attestation
 end
 
-w -> w : generate VP of wallet attestation\nwith **nonce=pre_authroized_code**
+note over w : generate VP of wallet attestation\n{"aud":"https://issuer.com","nonce":"pre_authroized_code"}
 
 w -> i : Token Request:\nHTTP POST https://issuer.com/<token_endpoint>\ngrant_type=pre-authorized_code&pre-authorized_code=..&user_pin=..**&wallet_attestation=<VP of wallet attestation>**
 i -> i : check pre-auth code & userPIN
