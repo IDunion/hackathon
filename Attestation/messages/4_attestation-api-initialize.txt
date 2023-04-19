@@ -1,10 +1,13 @@
-POST /attestation-api/initialize
+POST /attestation-api/initialize HTTP/1.1
+Host: https://d2a7-193-28-64-192.ngrok-free.app
+Content-Type: application/json
 {
     "type": "ANDROID",
     "output-options": "RAW_W3C_SDJWT"
 }
 
-200
+HTTP/1.1 200 OK
+Content-Type: application/json
 {
     "session-id": "8f5832b7-9ba5-4c7d-b275-3d74f8b7b9db",
     "device-attestation-challenge": "4ntC/+HdKd0hwTFk6/fwlA==",
